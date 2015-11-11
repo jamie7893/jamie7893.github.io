@@ -4,14 +4,15 @@
             <title>Jamie's Kickass Website</title>
           <style type="text/css">
             body {
-                background: rgb(0, 0, 0);
+                background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
                 color: rgb(45, 45, 45);
                 padding: 10px;
-                font-family: arial;
+                font-family: Comic Sans MS;
             }
             header {
                 font-size: 1.5em;
                 font-weight: bold;
+                margin-bottom: 10px;
             }
             [id=all-contents] {
                 max-width: 800px;
@@ -20,12 +21,15 @@
 
             /* navigation menu */
             nav {
-                background: rgb(253, 208, 23);
                 margin: 0 auto;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 display: flex;
-                padding: 10px;
                 border-radius: 25px;
+                background-color: #ffffff;
+                border: 1px solid black;
+                opacity: 0.6;
+                filter: alpha(opacity=60); 
+                padding: 10px;
             }
             nav header {
                 display: flex;
@@ -47,11 +51,10 @@
 
             /* main container area beneath menu */
             main {
-                background: rgb(245, 238, 219);
                 display: flex;
             }
             [class=sidebar] {
-                margin-right: 25px;
+                margin-left: 25px;
                 padding: 10px;
             }
             [class=sidebar] img {
@@ -59,7 +62,19 @@
             }
             [class=content] {
                 flex: 1;
-                padding: 15px;
+                padding: 10px;
+                margin-right: 5px;
+                margin-left: 10px;
+                background-color: #ffffff;
+                border: 1px solid black;
+                opacity: 0.6;
+                filter: alpha(opacity=60); 
+                width: 400px;
+                border-radius: 25px;
+            }
+            div.transbox p {
+                margin: 5%;
+                color: #000000;
             }
             [class=interests] header {
                 font-size: 1.25em;
@@ -69,34 +84,33 @@
         
         <body>
             <div id="all-contents">
-               <header><font color="Yellow"><font size="10">Student in bootcamp</font></font></header>
+                
+                  <header><font face=Comic Sans MS><center><font color=#FFFFFF><font size="10">Student in bootcamp</font></center></font></font></header>
                 <nav>
-                    <header>Jamie's Kickass Website</header>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                    </ul>
-                   
-                </nav>
+            <header>Jamie's Kickass Website</header>
+            <ul>
+                <li><a href="index.html">| Home |</a>
+                </li>
+                <li><a href="portfolio.html">| Portfolio |</a>
+                </li>
+            </ul>
+        </nav>
                 
                 <main>
                     <div class"sidebar">
-                        
-                        <img style="border: #FDD017 6px outset;" src="http://www.thecountryclubneworleans.com/wp/wp-content/uploads/Saints-Fleur-de-lis.jpg" height="775" width="775">
+                        <img style="border: #FFFFFF 6px outset;" src="https://media.giphy.com/media/JArssR745SMN2/giphy.gif" height="200" width="200">
                     </div>
-                    
                     <div class="content">
-                    </div>
-                </main>
-                
-                <section class="interests">
-                    <header><font color="Yellow"><font size="10">Interests</font></font></header>
+                                 <section class="interests">
+                    <header><p><u><font color=#000000><font size="5">Interests:</p></u></font></font></header>
                     <ul>
-                        <li><font color="Yellow"><font size="6">Coding</font></font></li>
-                        <li><font color="Yellow"><font size="6">Gaming</font></font></li>
-                        <li><font color="Yellow"><font size="6">Saints</font></font></li>
+                        <li><p><font color=#000000><font size="4">Coding</p></font></font></li>
+                        <li><p><font color=#000000><font size="4">Gaming</p></font></font></li>
+                        <li><p><font color=#000000><font size="4">Saints</p></font></font></li>
                     </ul>
                 </section>
+                    </div>
+                </main>
                 
             </div>
         </body>
