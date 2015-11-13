@@ -1,11 +1,4 @@
-<!doctype html>
-<html>
-    
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <title>Jamie's Kickass Website</title>
-          <style type="text/css">
-            body {
+  body {
                 background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
                 color: rgb(45, 45, 45);
                 padding: 10px;
@@ -80,41 +73,11 @@
             [class=interests] header {
                 font-size: 1.25em;
             }
-        </style>
-        </head>
-        
-        <body>
-            <div id="all-contents">
-                
-                  <header><font face=Comic Sans MS><center><font color=#FFFFFF><font size="10">Student in bootcamp</font></center></font></font></header>
-                <nav>
-            <header>Jamie's Kickass Website</header>
-            <ul>
-                <li><a href="index.html"><font face=Comic Sans MS>| Home |</font></a>
-                </li>
-                <li><a href="portfolio.html"><font face=Comic Sans MS>| Portfolio |</font></a>
-                </li>
-                <li><a href="studies.html"><font face=Comic Sans MS>| Studies |</font></a>
-                </li>
-            </ul>
-        </nav>
-                
-                <main>
-                    <div class"sidebar">
-                        <img style="border: #FFFFFF 6px outset;" src="https://media.giphy.com/media/JArssR745SMN2/giphy.gif" height="200" width="200">
-                    </div>
-                    <div class="content">
-                                 <section class="interests">
-                    <header><p><font face=Comic Sans MS><u><font color=#000000><font size="3">Interests:</font></p></u></font></font></header>
-                    <ul>
-                        <li><p><font face=Comic Sans MS><font color=#000000><font size="2">Coding</font></p></font></font></li>
-                        <li><p><font face=Comic Sans MS><font color=#000000><font size="2">Gaming</font></p></font></font></li>
-                        <li><p><font face=Comic Sans MS><font color=#000000><font size="2">Saints</font></p></font></font></li>
-                    </u>
-                </section>
-                    </div>
-                </main>
-                
-            </div>
-        </body>
-</html>
+            
+.content h1, h2, h3, h4, h5, h6 {
+    margin: 10px;
+}
+
+.content section > a {
+    text-decoration: none;
+}
