@@ -34,10 +34,76 @@ animals.push(dog);
 // I used a object because you it groups infomation together better. A Array is just a ordered pair
 var friends = {
         randomAnimal: function() {
-            var random = animals(Math.random() * animals.length);
+            var random = animals[Math.floor(Math.random() * (1 + animals.length - 1))];
             return random;
         }
     };
     
-    
-console.log(friends.randomAnimal);
+friends["name"] = friends.randomAnimal();
+
+function search(toSearch) {
+  for(var i = 0; i < animals.length; i++) {
+    for(var key in animals[i]) {
+      if(animals[i][key].indexOf(toSearch) !== -1) {
+        return animals[i];
+      } 
+    } 
+  }
+  return "Name does not exist";
+}
+
+function edit(name, object) {
+  for(var i = 0; i < animals.length; i++) {
+    for(var key in animals[i]) {
+      if(animals[i][key].indexOf(name) !== -1) {
+        return animals[i];
+      } 
+    } 
+  }
+  return "Name does not exist";
+}
+
+function edit(name, object) {
+  for(var i = 0; i < animals.length; i++) {
+    for(var key in animals[i]) {
+      if(animals[i][key].indexOf(name) !== -1) {
+        animals[i] = object;
+        return animals[i];
+      } 
+    } 
+  }
+  return "Name does not exist";
+}
+
+function remove(name) {
+  for(var i = 0; i < animals.length; i++) {
+    for(var key in animals[i]) {
+      if(animals[i][key].indexOf(name) !== -1) {
+        animals.splice(i, 1);
+        return animals;
+      } 
+    } 
+  }
+  return "Name does not exist";
+}
+
+function create(object) {
+  if (object.name.length > 0  && object.species.length > 0) {
+  var i = animals.length;
+    while(i--) {
+      if(animals[i].name === object.name) {
+        return "This name already exist";
+      }
+    }
+  animals.push(object);
+  return animals;
+  }
+  return  "You must enter a name and a species property";
+}
+
+
+
+
+
+
+
