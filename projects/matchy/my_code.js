@@ -100,10 +100,3 @@ function create(object) {
   }
   return  "You must enter a name and a species property";
 }
-
-
-
-
-
-
-
