@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery One</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>jQuery One</h1>
+    <section>
+      <ul>
+        <li>You will code in this index.html file, save and refresh to see the results of your work.</li>
+        <li><a href="directions.html" target="_blank">Directions...</a></li>
+      </ul>
+    </section>
+    <!-- YOUR HTML MARKUP GOES BELOW THIS COMMENT  -->
+        <div id="everything">
+        <h1>A heading!</h1>
+        <p><a id = 'second-p'></id>Here's some text!</p>
+        <p>Here's a second set of text!</p>
+        <div class="holder">
+            <ul>
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+            </ul>
+        </div>
+        <div class="holder">
+            <ul>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                <li>List Item 6</li>
+            </ul>
+        </div>
+    </div>
+    <!-- YOUR HTML MARKUP GOES ABOVE THIS COMMENT  -->
+  </div>
+  <script type ='text/javascript'>
+    var allDivs = $('div');
+    var allULs = $('ul');
+    var allPs = $('p');
+    allPs.css("color", "Blue");
+    $('#everything').css('background', 'red');
+    $('.holder').css('border', '1px solid black');
+    $('#second-p').remove();
+    $('ul > li').css('font-weight', 'bold');
+    $('div.container').prepend('<div> hello </div>');
+    $('div.container').append('goodbye');
+    $('body').prepend('<div></div>');
+    $('body').append('<div></div>');
+    $('body').prepend('<div></div>');
+    var ewDetachedDiv = $('<div> text here </div>');
+    $('<div id="first">i am first</div>').insertBefore('.holder:first');
+    $('<div id="last">i am last</div>').insertAfter('.holder:last');
+    var newDetachedDiv = $('<div> some text </div>');
+    newDetachedDiv.css('color', 'green');
+    $('body').append(newDetachedDiv);
+    var orphanNode = $('#target').detach();
+    $('#container').append(orphanNode);
+    $('#container').empty();
+  </script>
+</body>
+
+</html>

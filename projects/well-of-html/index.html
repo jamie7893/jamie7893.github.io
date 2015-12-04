@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <a href="https://en.wikipedia.org/wiki/JavaScript"></a>
+        <img src="img/black-currant.jpg" />
+    
+        <h1><small>Heading 1</small></h1>
+            <p>a <b>paragraph</b> here and here here and here and here and</p>
+                <ul>
+                    <li>list1</li>
+                    <li>list2</li>
+                    <li>list3</li>
+                </ul>
+                
+        <h2>Heading 2</h2>
+            <p>a paragraph here and <i>here here and here</i> and here and</p>
+                <ol>
+                    <li>list1</li>
+                    <li>list2</li>
+                    <li>list3</li>
+                </ol>
+                
+        <h3>Heading 3</h3>
+            <p>a paragraph here and here here and here and here and</p>
+            
+        <h4>Heading 4</h4>
+            <p>a paragraph here and here here and here and here and</p>
+            
+        <h5>Heading 5</h5>
+            <p>a paragraph here and here here and here and here and</p>
+            
+        <h6>Heading 6</h6>
+            <p>a paragraph here and here here and here and here and</p>
+            
+            <form action="/my-handling-form-page" method="post">
+                
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" value="Insert your name here." />
+                </div>
+                
+                <div>
+                    <label for="number">Number:</label>
+                    <input type="text" id="number" number="user_number" value="Insert your phone number here." />
+                </div>
+                
+                <div>
+                    <label for="adress">Adress:</label>
+                    <input type="text" id="adress" adress="user_adress" value="Insert your adress here." />
+                </div>
+                
+                <div>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="user_email" value="Insert your e-mail here." />
+                </div>
+                <div>
+                    <label for="msg">Message: </label>
+                    <textarea id="msg" name="user_message">Insert message here...</textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">Send your message</button>
+                </div>
+            </form>
+        
+        <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Adress</th>
+            <th>E-mail</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bob</td>
+            <td>532890428</td>
+            <td>1234 street</td>
+            <td>bob@bob.com</td>
+            <td>This is my message</td>
+        </tr>
+        <tr>
+            <td>Adam</td>
+            <td>532290428</td>
+            <td>15467 street</td>
+            <td>Adam@Adam.com</td>
+            <td>This is my message</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="flex-row">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+
+
+</div>
+
+<div class="example-grid">
+  <div class="row">
+      <div class="col-md-2"><img src="./img/cherries.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Cherries are tasty things that grow on trees! You can eat them and feel good about yourself!</div>
+  </div>
+  <div class="row">
+      <div class="col-md-2"><img src="./img/black-currant.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Black Currents are tasty things that grow on bushes! You can eat them and feel good about yourself!</div>
+  </div>
+  <div class="row">
+      <div class="col-md-2"><img src="./img/apple-in-grass.jpg" class="row-img"></img>
+      </div>
+      <div class="col-md-10">Apples are tasty things that grow on trees! You can eat them and feel good about yourself! They make great pies!</div>
+  </div>
+</div>
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>

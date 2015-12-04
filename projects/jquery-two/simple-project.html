@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery Two</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style type="text/css">
+    .d {
+      background-color: blue;
+      color: white;
+    }
+    
+    .success {
+      background-color: green;
+      color: white;
+    }
+    
+    .warn {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQuery Two : Simple Project</h1>
+    <!-- YOUR HTML MARKUP GOES BELOW THIS COMMENT  -->
+
+      
+    
+    
+    
+    <!-- YOUR HTML MARKUP GOES ABOVE THIS COMMENT  -->
+  </div>
+  <script>
+    $(document).ready(function() {
+        // YOUR JAVASCRIPT CODE GOES BELOW THIS COMMENT //
+        
+      var $div = $( "<div>" ).addClass('d')
+      .html('wow , this is a div')
+      .attr('id', 'hello-section')
+      .appendTo('body');
+      
+      var $btn1 = $('<button>')
+        .text('Button 1')
+        .addClass('success')
+        .on('click', function() {
+          $(this).removeClass('success').addClass('warn');
+        })
+        .appendTo('body');
+      
+      var $p = $( "<p>" );
+      var $span = $( "<span>" );
+      console.log($p, $div, $span);
+        
+        
+        
+        // YOUR JAVASCRIPT CODE GOES ABOVE THIS COMMENT //
+    });
+  </script>
+</body>
+
+</html>
