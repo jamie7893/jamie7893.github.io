@@ -1,152 +1,262 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="bower_components/lodash/lodash.min.js"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="bower_components/notes/notes.js"></script>
-        <script type="text/javascript" src="js/lib/spin.min.js"></script>
-        <script type="text/javascript" src="js/view/pacifier.js"></script>
-        <script type="text/javascript" src="js/products.js"></script>
-        <title>Product Project</title>
-    
-<style>
-.flex-container {
-display: -webkit-flex;
-display: flex;
-width: 700px;
-height: 200px;
-border: 1px solid black;
-}
-
-.flex-image {
-width: 100px;
-height: 100px;
-margin: 20px;
-margin-left: -40px;
-}
-
-.flex-item {
-width: 510px;
-height: 40px;
-margin: 20px;
-margin-left: 20px;
-}
-/* Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>    
-
-    </head>
-    <body>
+   <head>
+      <script src="bower_components/lodash/lodash.min.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+      <script type="text/javascript" src="js/lib/spin.min.js"></script>
+      <script type="text/javascript" src="js/view/pacifier.js"></script>
+      <script type="text/javascript" src="js/products.js"></script>
+      <title>Product Project</title>
+      <style>
+          body{
+          font-family: "Comic Sans MS";
+          background-image: url("http://hdwallpapersfit.com/wp-content/uploads/2015/04/black-pattern-hd-wallpapers.jpg");
+          border: 20px solid #2b303b;
+          margin: auto;
+          width: 46%;
+          padding: 10px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          }
+         .container-1 input#search::-webkit-input-placeholder {
+         color: white;
+         }
+         .container-1 input#search:-moz-placeholder {
+         color: white;  
+         }
+         .container-1 input#search::-moz-placeholder {
+         color: white;  
+         }
+         .container-1 input#search:-ms-input-placeholder {  
+         color: white;  
+         }
+         .container-1 input#search{
+         width: 300px;
+         height: 35px;
+         background: #2b303b;
+         font-size: 10pt;
+         float: left;
+         color: white;
+         padding-left: 45px;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         border: 1px solid black;
+         border-right: 1px;
+         }
+         .container-1{
+         width: 300px;
+         vertical-align: middle;
+         white-space: nowrap;
+         position: relative;
+         }
+         .box{
         
-        <div id="container" class="container">
-            <nav>
-                <h1>Product Project</h1>
-                <div class="container">
-                       <div class="row">    
-
-            </nav>
-            <input type="text" onkeyup="filter(this)" />
-            <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#" onClick="filtName();">Name</a>
-    <a href="#"onClick="filtColor();">Color</a>
-    <a href="#"onClick="filtHigh();">Price High to low</a>
-    <a href="#"onClick="filtLow();">Price Low to high</a>
-  </div>
-</div>
-            <script language="javascript" type="text/javascript">
-            
-    function filter(element) {
-       var value = $(element).val();
-           $("ul > div").each(function(i) {
-            if ($(this).text().search(value) > -1) {
-                $(this).parent().show();
+         margin-left: 440px;
+         width: 300px;
+         height: 50px;
+         }
+         .flex-container {
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         display: -webkit-flex;
+         display: flex;
+         width: 730px;
+         height: 200px;
+         border: 1px solid black;
+         background: #2b303b;
+         }
+         .flex-image {
+         width: 180px;
+         height: 168px;
+         margin: 20px;
+         margin-left: -30px;
+         background: none;
+         border: 4px solid black;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+         }
+         .flex-item {
+         width: 510px;
+         height: 45px;
+         margin: 20px;
+         margin-left: 10px;
+         color: white;
+         }
+         /* Dropdown Button */
+         .dropbtn {
+         background-color: #2b303b;
+         color: white;
+         padding: 5px;
+         font-size: 16px;
+         cursor: pointer;
+         height: 34px;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         border: 1px solid black;
+         }
+         /* Dropdown button on hover & focus */
+         .dropbtn:hover, .dropbtn:focus {
+         background-color: #405160;
+         }
+         /* The container 
+         <div>
+         - needed to position the dropdown content */
+         .dropdown {
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         position: relative;
+         display: inline-block;
+         background-color: #405160;
+         color: white;
+         border: 1px solid black;
+         }
+         /* Dropdown Content (Hidden by Default) */
+         .dropdown-content {
+         display: none;
+         position: absolute;
+         background-color: #2b303b;
+         min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         color: white;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         border: 1px solid black;
+         }
+         /* Links inside the dropdown */
+         .dropdown-content a {
+         color: white;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         border: 1px solid black;
+         -moz-border-radius: 5px;
+         border-radius: 5px;
+         }
+         /* Change color of dropdown links on hover */
+         .dropdown-content a:hover {background-color: #405160}
+         /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+         .show {display:block;}
+      </style>
+   </head>
+   <body>
+      <div id="container" class="container">
+      <nav>
+         <h1><font color='white'>Product Project</font></h1>
+      </nav>
+         <div class="box">
+         <div class="container-1">
+         <input id='search' type="text" placeholder='Search...' onkeyup="filter(this)" />
+         <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+               <a href="#" onClick="filtAll();">Everything</a>
+               <a href="#" onClick="filtName();">Name</a>
+               <a href="#" onClick="filtColor();">Color</a>
+               <a href="#" onClick="filtPrice();">Price</a>
+                </div>
+             </div>
+         </div>
+         </div>
+         <script type="text/javascript">
+            function filter(element) {
+               var value = $(element).val();
+               var $toSearch =  $("ul > div");
+                   $toSearch.each(function(i) {
+                    if ($(this).text().toLowerCase().search(value.toLowerCase()) > -1) {
+                        $(this).parent().show();
+                    }
+                    else {
+                        console.log($(this).parent());
+                        $(this).parent().hide();
+                    }
+                });
             }
-            else {
-                console.log($(this).parent());
-                $(this).parent().hide();
-            }
-        });
-    }
-    
-    /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-function filtName(){
-    console.log("nameee");
-}
-</script>
-            <main>
-            </main>
             
-        </div>
-        <script>
-            $(function () {
-                window.opspark.notes.show();
-            });
-        </script>
-    </body>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown menu if the user clicks outside of it
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+            
+            var dropdowns = document.getElementsByClassName("dropdown");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+            }
+            }
+            var original = filter;
+            function filtName(){
+            filter = function(element) {
+               var value = $(element).val();
+               var $toSearch =  $("ul > div > li:first-child");
+                   $toSearch.each(function(i) {
+                       console.log($('ul > div > li:first-child').text());
+                    if ($(this).text().toLowerCase().search(value.toLowerCase()) > -1) {
+                        $(this).parent().parent().show();
+                    }
+                    else {
+                        $(this).parent().parent().hide();
+                    }
+                });
+            };
+            }
+            
+            function filtAll() {
+            filter = original;
+            }
+            
+            function filtColor() {
+            filter = function(element) {
+               var value = $(element).val();
+               var $toSearch =  $("ul > div > li:nth-child(2)");
+                   $toSearch.each(function(i) {
+                       console.log($('ul > div > li:first-child').text());
+                    if ($(this).text().toLowerCase().search(value.toLowerCase()) > -1) {
+                        $(this).parent().parent().show();
+                    }
+                    else {
+                        $(this).parent().parent().hide();
+                    }
+                });
+            };
+            }
+            
+            function filtPrice() {
+            filter = function(element) {
+               var value = $(element).val();
+               var $toSearch =  $("ul > div > li:nth-child(3)");
+                   $toSearch.each(function(i) {
+                       console.log($('ul > div > li:first-child').text());
+                    if ($(this).text().toLowerCase().search(value.toLowerCase()) > -1) {
+                        $(this).parent().parent().show();
+                    }
+                    else {
+                        $(this).parent().parent().hide();
+                    }
+                });
+            };
+            }
+         </script>
+         <main>
+         </main>
+      </div>
+      <script>
+         $(function () {
+             window.opspark.notes.show();
+         });
+      </script>
+   </body>
 </html>
