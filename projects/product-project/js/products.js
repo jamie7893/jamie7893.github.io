@@ -1,41 +1,84 @@
-$(document).ready(function() {
-    // ALL YOUR CODE GOES BELOW HERE //
+$(document).ready(function () {
+    /*global _*/
     $.getJSON('data/product.json', function(products) {
-        createProduct(products);
-        console.log(products);
+        drawItems(products);
+        filterBtn(products);
     });
-
-    // ALL YOUR CODE GOES ABOVE HERE //
-    // Add the value of "Search..." to the input field and a class of .empty
-
-    $('.search-panel .dropdown-menu').find('a').click(function(e) {
-        e.preventDefault();
-        var param = $(this).attr("href").replace("#", "");
-        var concept = $(this).text();
-        $('.search-panel span#search_concept').text(concept);
-        $('.input-group #search_param').val(param);
-    });
+    
 });
 
 
-function createProduct(products) {
-    _.each(products, function(product, i) {
-        $('<ul class = flex-container id="flex' + i + '">')
-            .appendTo('main');
-        $('<div class = flex-image id = "image' + i + '"></div>').appendTo('#flex' + i);
-        $('<div  class= flex-item  id = "desc' + i + '"></div>').appendTo('#flex' + i);
-        //$('<  class= flex-item  id = "desc' + i + '"></div>').appendTo('#desc' + i);
-
-        var $desc = $('#desc' + i).prepend('<li style="list-style: none" class = flex-item id = description' + i + '">' + product.desc).fadeIn(1000);
-        $desc.appendTo('#desc li' + i);
-
-        var $color = $('#desc' + i).append('<li class = flex-item id = color' + i + '">' + "<b>Color: </b>" + product.color);
-        $color.appendTo('#desc li' + i);
-
-        var $price = $('#desc' + i).append('<li class = flex-item id = price' + i + '">' + "<b>Price:</b> $" + product.price);
-        $price.appendTo('#desc li' + i);
-
-        var $images = $('<div><img id="theImg' + i + '"src="img/product/thumbs/' + product.image + '"</img></div>');
-        $images.appendTo('#image' + i);
+function drawItems(products) {
+    $('#product-list').append(makeProdList(products));
+    $('input', '#form-search').on('keyup', function(event){
+        var term = event.target.value;
+        var productList = $('#product-list');
+        productList.empty();
+        var filteredList = search(products, term);
+        productList.append(makeProdList((filteredList)));
+        
     });
+    
+}
+function theImg(url) {
+    return $('<div class = flex-image>').append($('<img>').attr('src', url));
+    
+}
+function makeDetails(desc, price, stock, type) {
+    var container = $('<div>');
+    container.append($('<div>').addClass('desc').html(desc)).append($('<div>').addClass('price').html(price)).append($('<div>').addClass('stock').html(stock)).append($('<div>').addClass('type').html(type));
+    return container;
+    
+}
+function search(collection, target) {
+    return _.reduce(collection, function (results, value) {
+        if(isComplex(value)) {
+            if(search(value, target).length) {
+                results.push(value);
+                
+            }
+            
+        } else if(typeof value === 'string') {
+            if(value.toLowerCase().indexOf(target.toLowerCase()) > -1) {
+                results.push(value);
+                
+            }
+            
+        }
+        return results;
+        
+    }, []);
+    
+}
+function isComplex(value) {
+    if(Array.isArray(value)) return true;
+    if(typeof value === 'object' && value !== null && value instanceof Date === false) return true;
+    return false;
+    
+}
+function makeProdList(products) {
+    return $.map(products, function(product) {
+        return $('<li>').attr('id', product.id).data('product', product).addClass('product-row').append(theImg("img/product/thumbs/" + product.image)).append(makeDetails('<u>' + product.desc+ '</u>', '<b>Price: </b>' + '$' + product.price, '<b>In stock: </b>' + product.stock, product.type.charAt(0).toUpperCase() + product.type.substr(1)));
+        
+    });
+    
+}
+
+function filterBtn(products){
+_.map(_.uniq(_.pluck(products,'type')),function(types){
+    $('#myDropdown').append(
+        $('<a>').attr('href', '#').html(types.charAt(0).toUpperCase() + types.slice(1)).on('click', function() {
+            _.map(products,function(product){if(product.type !== types){
+                return $('#' + product.id).hide();
+            
+        }
+        return $('#' + product.id).show();
+            
+        });
+            
+        })
+        );
+    
+});
+    
 }
