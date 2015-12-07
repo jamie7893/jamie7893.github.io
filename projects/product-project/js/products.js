@@ -3,6 +3,7 @@ $(document).ready(function () {
     $.getJSON('data/product.json', function(products) {
         drawItems(products);
         filterBtn(products);
+        console.log(products);
     });
     
 });
