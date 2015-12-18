@@ -23,6 +23,10 @@ function addAnimals(ans, id){
         $("#"+id).append(mu);
     }
 }
+
+function search(name) {
+    
+}
 $(function(){
     if(window.animals){
         addAnimals(window.animals, "profiles");
