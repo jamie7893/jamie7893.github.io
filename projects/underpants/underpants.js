@@ -436,8 +436,8 @@ _.reduce = function (arr, func, seed){
         if (seed === undefined) {
             seed = arr[0];
             first = false;
-       }
-           _.each(arr, function(value, i, arr){
+      }
+          _.each(arr, function(value, i, arr){
         if (i > 0 || first === true) {
             seed = func(seed, value, i, arr);
         }
@@ -445,6 +445,24 @@ _.reduce = function (arr, func, seed){
      return seed;
 };
 
+
+// _.reduce = function(array, fn, seed) {
+    
+//     if (seed === undefined) {
+//         seed = array[0];
+//     }
+    
+//     var previousResult = seed;
+    
+//     for (let i = 0; i < array.length; i++) {
+//         if(i > 0) {
+//         previousResult = fn(previousResult, array[i], i);
+//         }
+//     }
+    
+//     return previousResult;
+    
+// };
 /** _.extend()
 * Arguments:
 *   1) An Object

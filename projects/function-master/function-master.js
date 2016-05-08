@@ -23,7 +23,7 @@ function keysToString(obj){
     return joinKeys;
 }
 
-function valuesToString(obj){
+var valuesToString = (obj) => {
     var keys = Object.keys(obj);
     var vals = [];
     for (var i = 0; i < keys.length; i++) {
@@ -115,6 +115,7 @@ function isFriend(name, object) {
         }
     } return false;
 }
+
 function nonFriends(name, list) {
 var nonfriends = [];
     for (var i = 0; i < list.length; i++) {
