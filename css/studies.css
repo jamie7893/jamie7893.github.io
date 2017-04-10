@@ -1,7 +1,6 @@
   body {
-                background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
+                background-color: #91AA9D;
                 color: rgb(45, 45, 45);
-                padding: 10px;
             }
             header {
                 font-size: 1.5em;
@@ -22,7 +21,7 @@
                 background-color: #ffffff;
                 border: 1px solid black;
                 opacity: 0.6;
-                filter: alpha(opacity=60); 
+                filter: alpha(opacity=60);
                 padding: 10px;
             }
             nav header {
@@ -62,7 +61,7 @@
                 background-color: #ffffff;
                 border: 1px solid black;
                 opacity: 0.9;
-                filter: alpha(opacity=60); 
+                filter: alpha(opacity=60);
                 width: 400px;
                 border-radius: 25px;
             }
@@ -73,7 +72,7 @@
             [class=interests] header {
                 font-size: 1.25em;
             }
-            
+
 .content h1, h2, h3, h4, h5, h6 {
     margin: 10px;
 }

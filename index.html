@@ -1,196 +1,113 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jamie's Kickass Website</title>
-    <style type="text/css">
-        body {
-            background-image: url("https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif");
-            color: rgb(45, 45, 45);
-            padding: 10px;
-        }
-        
-        header {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        [id=all-contents] {
-            max-width: 800px;
-            margin: auto;
-        }
-        /* navigation menu */
-        
-        nav {
-            margin: 0 auto;
-            margin-bottom: 10px;
-            display: flex;
-            border-radius: 25px;
-            background-color: #ffffff;
-            border: 1px solid black;
-            opacity: 0.6;
-            filter: alpha(opacity=60);
-            padding: 10px;
-        }
-        
-        nav header {
-            display: flex;
-            align-items: center;
-            color: rgb(0, 0, 0);
-            flex: 1;
-        }
-        
-        nav ul {
-            list-style-image: none;
-        }
-        
-        nav li {
-            display: inline-block;
-            padding: 0 10px;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #000000;
-        }
-        /* main container area beneath menu */
-        
-        main {
-            display: flex;
-        }
-        
-        [class=sidebar] {
-            margin-left: 25px;
-            padding: 10px;
-        }
-        
-        [class=sidebar] img {
-            width: 200px;
-        }
-        
-        [class=content] {
-            flex: 1;
-            padding: 5px;
-            margin-right: 10px;
-            margin-left: 10px;
-            background-color: #ffffff;
-            border: 1px solid black;
-            opacity: 0.6;
-            filter: alpha(opacity=60);
-            width: 400px;
-            border-radius: 25px;
-        }
-        
-        div.transbox p {
-            margin: 5%;
-            color: #000000;
-        }
-        
-        [class=interests] header {
-            font-size: 1.25em;
-        }
-    </style>
+  <title>Jamie Keelen | Software Engineer</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div id="all-contents">
-
-        <header><font face=Comic Sans MS><center><font color=#FFFFFF><font size="10">Javascript Developer</font></center>
-            </font>
-            </font>
-        </header>
-        <nav>
-            <header>Jamie's Kickass Website</header>
-            <ul>
-                <li><a href="index.html"><font face=Comic Sans MS>| Home |</font></a>
-                </li>
-                <li><a href="portfolio.html"><font face=Comic Sans MS>| Portfolio |</font></a>
-                </li>
-                <li><a href="studies.html"><font face=Comic Sans MS>| Studies |</font></a>
-                </li>
-            </ul>
-        </nav>
-
-        <main>
-            <div class "sidebar">
-                <img style="border: #FFFFFF 6px outset;" src="https://media.giphy.com/media/JArssR745SMN2/giphy.gif" height="200" width="200">
-            </div>
-            <div class="content">
-                <section class="interests">
-                    <header>
-                        <p><font face=Comic Sans MS><u><font color=#000000><font size="3">Interests:</font></p>
-                        </u>
-                        </font>
-                        </font>
-                    </header>
-                    <ul>
-                        <li>
-                            <p><font face=Comic Sans MS><font color=#000000><font size="2">Coding</font></p>
-                            </font>
-                            </font>
-                        </li>
-                        <li>
-                            <p><font face=Comic Sans MS><font color=#000000><font size="2">Gaming</font></p>
-                            </font>
-                            </font>
-                        </li>
-                        <li>
-                            <p><font face=Comic Sans MS><font color=#000000><font size="2">Sports</font></p>
-                            </font>
-                            </font>
-                        </li>
-                    </ul>
-                </section>
-                <section class="interests">
-                    <header>
-                        <p><font face=Comic Sans MS><u><font color=#000000><font size="3">Coding:</font></p>
-                        </u>
-                        </font>
-                        </font>
-                    </header>
-                    <ul>
-                        <li>
-                            <p><font face=Comic Sans MS><u><font color=#000000><font size="3">Server Side experience:</font></u></font></font></p>
-                                <ul>
-                                    <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Node.js</font></font></font></p>
-                                    </li>
-                                       <li>
-                                      <p><font face=Comic Sans MS><font color=#000000><font size="2">Express</font></font></font></p>
-                                    </li>
-                                       <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Sequelize</font></font></font></p>
-                                    </li>
-                                       <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Mysql</font></font></font></p>
-                                    </li>
-                                       <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Postgres</font></font></font></p>
-                                    </li>
-                                </ul>
-                        </li>
-                        <li>
-                            <p><font face=Comic Sans MS><u><font color=#000000><font size="3">Client Side experience:</font></u></font></font></p>
-                                <ul>
-                                    <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Angular</font></font></font></p>
-                                    </li>
-                                       <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">React</font></font></font></p>
-                                    </li>
-                                       <li>
-                                        <p><font face=Comic Sans MS><font color=#000000><font size="2">Jquery</font></font></font></p>
-                                    </li>
-                                </ul>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </main>
-
+<body data-spy="scroll" data-target="#navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Jamie Keelen</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <div class="jumbotron">
+            <div class="row">
+          <div class="col-sm-4">
+            <a target="_blank" class="btn btn-block btn-default" href="https://github.com/jamie7893" role="button"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+          </div>
+          <div class="col-sm-4">
+            <a target="_blank" class="btn btn-block btn-primary" href="https://www.linkedin.com/in/jamiekeelen" role="button"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          </div>
+          <div class="col-sm-4">
+            <a target="_blank" class="btn btn-block btn-success" href="http://www.google.com/recaptcha/mailhide/d?k=017cUK4oonbpckPrdNhSWc5g==&c=W5DBeLGVml4ZHgikMKYB0A1TEF08R9xniEbOwP8GqI8=" role="button"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="page-header">
+        <h2>About</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 hidden-xs" id="portrait">
+          <img class="img-responsive img-rounded" id="about-image" alt="Portrait of Ray Meibaum">
+        </div>
+        <div class="col-sm-8 col-xs-12">
+          <p class="lead" id="about-lead"></p>
+          <p id="about-text"></p>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="page-header">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="row text-center" id="portfolio-content"></div>
+    </section>
+
+    <!-- portfolio modal -->
+    <div class="modal fade" id="portfolio-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="skills">
+      <div class="page-header">
+        <h2>Skills</h2>
+      </div>
+      <div class="row" id="skills-content"></div>
+    </section>
+
+    <section id="education">
+      <div class="page-header">
+        <h2>Education</h2>
+      </div>
+      <div id="education-text"></div>
+    </section>
+
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">©2016 Jamie Keelen. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://use.fontawesome.com/afbd43557e.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
