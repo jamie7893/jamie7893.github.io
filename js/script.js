@@ -4,7 +4,7 @@ $(function() {
     var jamie = {
         about: {
             lead: "Jamie Keelen is a Software Engineer looking to grow with a great company.",
-            main: "I am a Software Engineer specializing in JavaScript. I have had eperience in multiple frameworks across the full stack, such as React.js, Angular.js, Node.js, Express.js, PostgresSQL, MySQL, XSLT, MongoDB. I have 1 year experience working in a scrum environment, supporting and maintaining a legacy web application, while developing a entire new web application with the same functionality with newer technologies, such as client side storage using PouchDB."
+            main: "I am a Software Engineer specializing in JavaScript. I have had eperience in multiple frameworks across the full stack, such as React.js, Angular.js, Node.js, Express.js, PostgresSQL, MySQL, XSLT, MongoDB. I have 4 years experience working in a scrum environment, supporting and maintaining a legacy web application, while developing a entire new web application with the same functionality with newer technologies, such as client side storage using PouchDB."
         },
         portrait: "https://avatars3.githubusercontent.com/u/15333506?v=3&s=460",
         portfolio: [
